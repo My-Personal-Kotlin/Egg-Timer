@@ -123,6 +123,7 @@ class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
                     ) as NotificationManager
                 notificationManager.cancelNotifications() // to cancel all existing notification of app previously
 
+                // set notification
                 AlarmManagerCompat.setExactAndAllowWhileIdle(
                     alarmManager,
                     AlarmManager.ELAPSED_REALTIME_WAKEUP,
