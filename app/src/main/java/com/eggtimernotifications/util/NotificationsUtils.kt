@@ -49,7 +49,7 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
         applicationContext,
         REQUEST_CODE,
         snoozeIntent,
-        FLAGS)
+        0)
 
     // TODO: Step 1.2 get an instance of NotificationCompat.Builder
     // Build the notification

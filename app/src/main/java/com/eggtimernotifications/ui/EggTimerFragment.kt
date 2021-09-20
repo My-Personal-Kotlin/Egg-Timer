@@ -16,16 +16,13 @@ import com.eggtimernotifications.databinding.FragmentEggTimerBinding
 
 class EggTimerFragment : Fragment() {
 
+    private lateinit var binding: FragmentEggTimerBinding
+
     private val TOPIC = "breakfast"
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val binding: FragmentEggTimerBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_egg_timer, container, false
-        )
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_egg_timer, container, false)
 
         val viewModel = ViewModelProvider(this).get(EggTimerViewModel::class.java)
 
@@ -51,7 +48,7 @@ class EggTimerFragment : Fragment() {
                 NotificationManager.IMPORTANCE_HIGH
             )// TODO: Step 2.6 disable badges for this channel
                 .apply {
-                    setShowBadge(false)
+                    setShowBadge(false) // disable notification hint on App
                 }
 
             notificationChannel.enableLights(true)

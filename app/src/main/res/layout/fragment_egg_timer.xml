@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="eggTimerViewModel"
             type="com.eggtimernotifications.ui.EggTimerViewModel" />
@@ -35,7 +34,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:entries="@array/egg_array"
-            android:onItemSelected="@{(parent, view, selection, id)-> eggTimerViewModel.setTimeSelected(selection)}"
+            android:onItemSelected="@{(parent, view, selection, id) -> eggTimerViewModel.setTimeSelected(selection)}"
             android:prompt="@string/egg_prompt"
             android:selectedItemPosition="@{eggTimerViewModel.timeSelection}"
             app:layout_constraintBottom_toBottomOf="parent"
