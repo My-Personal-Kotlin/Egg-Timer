@@ -63,4 +63,19 @@ dependencies {
     implementation("com.google.firebase:firebase-messaging:22.0.0")
     implementation 'android.arch.work:work-runtime:1.0.1'
 
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'
+    implementation 'com.google.firebase:firebase-core:17.4.4'
+    implementation 'com.google.firebase:firebase-iid:20.2.3'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+    implementation 'android.arch.work:work-runtime:1.0.1'
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
 }
+apply plugin: 'com.google.gms.google-services'
+
+// Command to Get SHA-1
+// keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore -storepass android -keypass android
